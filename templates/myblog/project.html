@@ -1,0 +1,103 @@
+{% extends "myblog/base.html" %}
+{% load staticfiles %}
+{% block content %}
+    <div class="wrapper row3">
+  <div id="container" class="clear"> 
+    <!-- ####################################################################################################### -->
+    <div id="content">
+      <h1>Please Post Project which is interesting </h1>
+      <img class="imgr" src="{% static 'images/project1.jpg '%}" alt="" width="225" height="225" />
+      <p>Baza is here to help every Rwandan student to be able to make his/her own project and run it it goes in any field we have no limits</p>
+      <img class="imgl" src="{% static 'images/project2.jpg.crdownload.jpg'%}" alt="" width="225" height="225" />
+      <p>Don't wait for others this is for you and we are here for you now thats the time to change the world starting from your country</p>
+
+      
+      <p>bring your idea it can change your life and also other's life so dont't wait just post we are ale to help in all possible way </p>
+      <h2>Table(s)</h2>
+      <table summary="Summary Here" cellpadding="0" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Science</th>
+            <th>Arts</th>
+            <th>other Skills</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="dark">
+            <td>Value 5</td>
+            <td>Value 6</td>
+            <td>Value 7</td>
+          </tr>
+          <tr class="light">
+            <td>Value 9</td>
+            <td>Value 10</td>
+            <td>Value 11</td>
+           
+          </tr>
+          <tr class="dark">
+            <td>Value 13</td>
+            <td>Value 14</td>
+            <td>Value 15</td>
+            
+        </tbody>
+      </table>
+      <div id="comments" style="width: auto">
+        <h2>Comments</h2>
+        {% for Project in name %}
+        <ul class="commentlist">
+          <li class="comment_odd">
+            <div class="author"><img src="{{ Project.image.url }}" width="40" height="40" alt="User" ><span class="name"><a href="#">{{ Project.first_name}} {{ Project.last_name}}</a></span><br/> <span class="wrote">wrote:</span>{{ Project.field }}</div>
+            <div class="submitdate"><a href="#">{{ Project.created_date }}</a></div>
+            <p>{{ Project.text |linebreaksbr }}</p>
+          </li>
+          
+
+        </ul>
+        {% endfor %}
+      </div>
+      <h2>Write A Project</h2>
+      <div id="respond">
+        <form action="#" method="post" action="{% url 'project' %}" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+          
+         
+          
+          <p>
+            <input name="submit" type="submit" id="submit" value="Submit Form" />
+            &nbsp;
+            <input name="reset" type="reset" id="reset" tabindex="5" value="Reset Form" />
+          </p>
+        </form>
+      </div>
+    </div>
+    <div id="column">
+      <div class="subnav">
+        <h2>Supportable Projects</h2>
+        <ul>
+          <li><a href="#">Science </a></li>
+            <ul>
+              <li><a href="#">Computer </a></li>
+              <li><a href="#">Agriculture</a></li>
+              <li><a href="#">Electrical</a></li>
+              <li><a href="#">Irrigation</a></li>
+              <li><a href="#">Electronic</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Arts</a>
+            <ul>
+              <li><a href="#">Music</a></li>
+              <li><a href="#">Business</a>
+              <li><a href="#">Drawing</a>
+            </ul>
+          </li>
+          <li><a href="#">And Others</a></li>
+        </ul>
+      </div>
+        
+    </div>
+    <!-- ####################################################################################################### --> 
+  </div>
+</div>
+{% endblock content %}
+
