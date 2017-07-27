@@ -19,3 +19,14 @@ class Project(models.Model):
     
     published_date = models.DateTimeField(
             blank=True, null=True)
+
+class UserProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    location = models.CharField(max_length=300)
+    school = models.CharField(max_length=100)
+    teacher = models.CharField(max_length=100)
+    bio = models.CharField(max_length=300)
+    birth_date = models.DateField(null=True, blank=True)
+
+
+ 

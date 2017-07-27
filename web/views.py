@@ -1,22 +1,30 @@
 from django.shortcuts import render, redirect
-from .models import Project
-from .forms import ProjectForm, UserForm
+from .models import Project, UserProfile
+from .forms import ProjectForm, UserForm, ProfileForm
+from django.contrib.auth import authenticate, login
 
 
 def home(request):
-	 name = SchoolForm()
+    return render(request,'myblog/home.html')
+def register(request):
     if request.method == 'POST':
         form = UserForm(request.POST)
+        name = ProfileForm(request.POST)
         if form.is_valid():
             form.save()
+            save= name.save(commit=False)
+            save.user = user
+            save.save()
             username = form.cleaned_data.get('username')
             raw_password = form.cleaned_data.get('password1')
             user = authenticate(username=username, password=raw_password)
             login(request, user)
+
             return redirect('home')
     else:
         form = UserForm()
-    return render(request,'myblog/home.html',{'form':form,'name':name })
+        name = ProfileForm()
+    return render(request,'registration/register.html',{'form':form, 'name':name })
 
 def project(request):
     name = Project.objects.all()
@@ -31,3 +39,7 @@ def project(request):
     else:
         form = ProjectForm()
     return render(request, 'myblog/project.html', {'form': form, 'name':name,'name':name, 'science':science,'arts':arts,'skills':skills})
+
+
+def new(request):
+    return render(request, 'myblog/new.html')

@@ -20,21 +20,16 @@ Licence URI: http://www.os-templates.com/template-terms
 <script type="text/javascript" src="{% static 'layout/scripts/galleryviewthemes/jquery.galleryview.2.1.1.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'layout/scripts/galleryviewthemes/jquery.galleryview.setup.js' %}"></script>
 
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
 <!-- / Homepage Specific -->
 </head>
 <body id="top">
 <div class="wrapper row1">
   <div id="header" class="clear">
     <div class="fl_left">
-      <h1><a href="index.html">Education Board</a></h1>
-      <p>Free Website Template</p>
+      <h1><a href="index.html">Baza</a></h1>
     </div>
     <div class="fl_right">
-      <p><a href="" data-toggle="modal" data-target="#myModal">Register</button>  | <a href="#">Staff Login</a></p>
+      <p><a href="{% url 'login' %}"> Login</a>  | <a href="" type="button" data-toggle="modal" data-target="#myModal"> Register</a></p>
       <form action="#" method="post" id="sitesearch">
         <fieldset>
           <legend>Site Search</legend>
@@ -53,26 +48,9 @@ Licence URI: http://www.os-templates.com/template-terms
     </div>
   </div>
 </div>
-<!-- ####################################################################################################### -->
 
- <!-- Modal -->
-  <div class="modal fade" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
-        </div>
-        <div class="modal-body">
-          <p>This is a large modal.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+<!-- ####################################################################################################### -->
 
 
 <body>
