@@ -1,0 +1,41 @@
+{% extends "myblog/base2.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="panel">
+  <h1>{{ post.title }}</h1>
+          <p>{{ post.text|linebreaksbr }}</p>
+        
+        
+</div>
+ 
+
+            
+                 <!--comment about the post-->
+ {% for Post in post.answers.all %}
+        <div class="panel">
+          <fieldset>
+          <div class="user-thumb"> <img width="40" height="40" alt="User" src="" style="margin-top: 0px">{{ Post.poster }}</div>
+          <h2>{{ Post.text| linebreaksbr }} </a></h2><br/>
+          <a href="{% url 'ok' pk=Post.pk %}">Reply</a>
+        </fieldset>
+        </div>
+
+
+        
+        
+        {% endfor %}
+                 
+                  </li>
+                </ul>
+                
+          
+         {% endblock %}
+
+        
+      </div>
+
+       
+
+</body>
+</html>
