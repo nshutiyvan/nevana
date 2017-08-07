@@ -1,0 +1,10 @@
+{% if friends %}
+    <ul class="friends">
+      {% for friend in friends %}
+        <li><a href="/user/{{ friend.username }}/">
+          {{ friend.username }}</a></li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No friends found.</p>
+  {% endif %}

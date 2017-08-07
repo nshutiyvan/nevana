@@ -17,7 +17,7 @@
           <fieldset>
           <div class="user-thumb"> <img width="40" height="40" alt="User" src="" style="margin-top: 0px">{{ Post.poster }}</div>
           <h2>{{ Post.text| linebreaksbr }} </a></h2><br/>
-          <a href="{% url 'ok' pk=Post.pk %}">Reply</a>
+        
         </fieldset>
         </div>
 
@@ -28,7 +28,7 @@
                  
                   </li>
                 </ul>
-                
+                  <a href="{% url 'comment' %}">Reply</a>
           
          {% endblock %}
 

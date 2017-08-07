@@ -15,10 +15,14 @@
         <!--<div id="a1" class="collapse out well">This is the message body1</div>-->
         <br>
         {% for Post in name %}
+        
         <div class="panel">
           <fieldset>
-          <div class="user-thumb"> <img width="40" height="40" alt="User" src="" style="margin-top: 0px">{{ Post.poster }}</div>
-          <h2><a href="{% url 'post_detail' pk=Post.pk %}">{{ Post.title }}</a></h2><br/><button class="btn btn-primary btn-xs"><i class="fa fa-check-square-o"></i> Reply</button></pre>
+          <div class="user-thumb"> <img src="" width="40" height="40" alt="User" src="" style="margin-top: 0px">{{ Post.poster }}</div>
+          <h2><a href="{% url 'post_detail' pk=Post.pk %}">{{ Post.title }}</a></h2><br/><button class="btn btn-primary btn-xs"><i class="fa fa-ok"></i> Like</button>
+           
+
+          </pre>
         </fieldset>
         </div>
 
@@ -31,7 +35,7 @@
      
        
       <div class="tab-pane" id="sent">
-            <a type="button" data-toggle="collapse" data-target="#s1">
+            <a type="button"a dta-toggle="collapse" data-target="#s1">
             <div class="btn-toolbar well well-sm" role="toolbar"  style="margin:0px;">
               <div class="btn-group"><input type="checkbox"></div>
               <div class="btn-group col-md-3">Kumar</div>

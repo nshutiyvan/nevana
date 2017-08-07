@@ -93,8 +93,17 @@
               <li><a href="#" data-target="#add" data-toggle="modal"><i class="fa fa-plus"></i> Add </a></li>
               <li><a href="{% url 'logout' %}"><i class="fa fa-sign-out"></i> Logout</a></li>
             </ul>
+            
+             <h3 class="nav nav-pills nav-stacked well">All Friends
+              {% for user in all_friend%}
+              <a href="">
+                 <h5>{{ user.username }}</h5>
+              </a>
+             
+              {% endfor %}
+              </h3>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-9">
                 <div class="panel">
                     <img class="pic img-circle" src="http://placehold.it/120x120" alt="...">
                     <div class="name"><small>{{ user.username }}</small></div>

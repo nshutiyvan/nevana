@@ -10,6 +10,7 @@ class Project(models.Model):
     first_name  = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
     email = models.CharField(max_length=50)
+    image = models.FileField(upload_to='media/', null=True)
 
     Choices=(
         ('Science','science') ,
@@ -29,7 +30,9 @@ class UserProfile(models.Model):
     location = models.CharField(max_length=300)
     school = models.CharField(max_length=100)
     job = models.CharField(max_length=300)
+    image = models.FileField(upload_to='media/', null=True)
     birth_date = models.DateField(null=True, blank=True)
+
 
 
 
@@ -57,3 +60,31 @@ class Post(models.Model):
 class Answer(models.Model):
     answer = models.ForeignKey(Post, related_name='answers', null=True)
     text = models.TextField()
+
+#adding a friend 
+class Friendship(models.Model):
+  from_friend = models.ForeignKey(
+    User, related_name='friend_set'
+  )
+  to_friend = models.ForeignKey(
+    User, related_name='to_friend_set'
+  )
+  def __unicode__(self):
+    return u'%s, %s' % (
+      self.from_friend.username,
+      self.to_friend.username
+    )
+  class Meta:
+    unique_together = (('to_friend', 'from_friend'), )
+
+
+class FriendMgmt(models.Model):
+    user = models.ManyToManyField(User)
+    current_user = models.ForeignKey(User, related_name='owner', null=True)
+
+    @classmethod
+    def make_friend(cls, current_user, new_friend):
+        friend, create = cls.objects.get_or_create(
+            current_user=current_user
+        )
+        friend.users.add(new_friend)

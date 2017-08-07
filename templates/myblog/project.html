@@ -46,7 +46,7 @@
         {% for Project in name %}
         <ul class="commentlist">
           <li class="comment_odd">
-            <div class="author"><img src="{{ Project.image.url }}" width="40" height="40" alt="User" ><span class="name"><a href="#">{{ Project.first_name}} {{ Project.last_name}}</a></span><br/> <span class="wrote">wrote:</span>{{ Project.field }}</div>
+            <div class="author"><img src="{{ Project.image.url  }}" width="40" height="40" alt="User" ><span class="name"><a href="#">{{ Project.first_name}} {{ Project.last_name}}</a></span><br/> <span class="wrote">wrote:</span>{{ Project.field }}</div>
             <div class="submitdate"><a href="#">{{ Project.created_date }}</a></div>
             <p>{{ Project.text |linebreaksbr }}</p>
           </li>
