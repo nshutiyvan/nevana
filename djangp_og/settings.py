@@ -25,7 +25,7 @@ SECRET_KEY = 'f4-muw_kfk+cont0dtrr0&p^&oju(g2w%b4g5lryxo!hhs8pts'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["djangpog.herokuapp.com"]
 
 
 # Application definition
