@@ -1,0 +1,1 @@
+web: gunicorn djangp_og.wsgi --log-file -
