@@ -5,3 +5,5 @@ db.sqlite3
 /static
 .DS_STORE
 /.idea
+/.static_in_env
+/.static_in_pro
