@@ -1,1 +1,10 @@
-Django==1.10.3
+boto3==1.4.5
+botocore==1.5.92
+django-storages==1.6.5
+docutils==0.14
+jmespath==0.9.3
+olefile==0.44
+Pillow==4.2.1
+python-dateutil==2.6.1
+s3transfer==0.1.10
+six==1.10.0
