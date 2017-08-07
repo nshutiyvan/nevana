@@ -1,7 +1,9 @@
 boto3==1.4.5
 botocore==1.5.92
+Django==1.10.3
 django-storages==1.6.5
 docutils==0.14
+gunicorn==19.7.1
 jmespath==0.9.3
 olefile==0.44
 Pillow==4.2.1
