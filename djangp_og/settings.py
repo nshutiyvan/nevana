@@ -133,3 +133,5 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "staticfiles", "media_root")
 
 LOGIN_REDIRECT_URL = 'new'
 AUTH_PROFILE_MODULE = 'web.UserProfile'
+
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
