@@ -28,7 +28,7 @@ DEBUG = config('DEBUG',cast=bool)
 
 print(SECRET_KEY)
 
-ALLOWED_HOSTS = ["djangpog.herokuapp.com","*"]
+ALLOWED_HOSTS = ["djangpog.herokuapp.com"]
 
 
 # Application definition

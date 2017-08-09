@@ -27,11 +27,10 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/djangp_og/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="798">
-              <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+            <state relative-caret-position="699">
+              <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding>
                 <element signature="e#313#322#0" expanded="true" />
-                <marker date="1502273823104" expanded="true" signature="881:952" ph="..." />
               </folding>
             </state>
           </provider>
@@ -439,7 +438,6 @@
           <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding>
             <element signature="e#313#322#0" expanded="true" />
-            <marker date="1502273823104" expanded="true" signature="881:952" ph="..." />
           </folding>
         </state>
       </provider>
@@ -492,7 +490,6 @@
           <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="40" selection-end-line="27" selection-end-column="40" />
           <folding>
             <element signature="e#313#322#0" expanded="true" />
-            <marker date="1502273823104" expanded="true" signature="881:952" ph="..." />
           </folding>
         </state>
       </provider>
@@ -575,11 +572,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/djangp_og/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="33" column="24" lean-forward="true" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+        <state relative-caret-position="699">
+          <caret line="30" column="41" lean-forward="false" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
           <folding>
             <element signature="e#313#322#0" expanded="true" />
-            <marker date="1502273823104" expanded="true" signature="881:952" ph="..." />
           </folding>
         </state>
       </provider>
