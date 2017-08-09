@@ -2,11 +2,12 @@
 *~
 __pycache__
 .db.sqlite3
-./staticfiles
+staticfiles
 .DS_STORE
-./.idea
-./static_in_env
-./static_in_pro
+.idea
+static_in_env
+static_in_pro
+.env
 
 __pycache__/
 *.py[cod]
